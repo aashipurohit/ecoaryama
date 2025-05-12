@@ -17,7 +17,7 @@ const Navbar = () => {
     }, [visible]);
 
     return (
-        <nav className="bg-zinc-100 w-full h-20 shadow-sm" aria-label="Main navigation" role="navigation">
+        <nav className="bg-zinc-100 w-full h-30 shadow-sm" aria-label="Main navigation" role="navigation">
             <div className="w-full h-full px-4 sm:px-8 flex flex-wrap items-center justify-between">
 
                 {/* Logo */}
@@ -57,7 +57,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Icons */}
-                <div className="ml-auto flex items-center space-x-4 sm:space-x-6 md:space-x-8">
+                <div className="ml-auto flex items-center space-x-4 sm:space-x-6 md:space-x-8 mt-2">
                     <button 
                         onClick={() => setShowSearch(true)} 
                         className="p-2 text-gray-700 hover:text-fuchsia-600 transition-colors focus:outline-none focus:ring-2 focus:ring-fuchsia-500 rounded"
@@ -98,7 +98,7 @@ const Navbar = () => {
 
                     <button 
                         onClick={() => setVisible(true)} 
-                        className="md:hidden p-2 text-gray-700 hover:text-fuchsia-600 transition-colors focus:outline-none focus:ring-2 focus:ring-fuchsia-500 rounded"
+                        className="md:hidden p-2 text-gray-700 hover:text-fuchsia-600 transition-colors focus:outline-none focus:ring-2 focus:ring-fuchsia-500 rounded mt-2"
                         aria-label="Open menu"
                     >
                         <FiMenu className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -111,7 +111,7 @@ const Navbar = () => {
                 ref={mobileMenuRef}
                 className={`md:hidden fixed inset-0 bg-white z-20 transition-all duration-300 ease-in-out transform ${visible ? 'translate-x-0' : 'translate-x-full'}`}
             >
-                <div className="flex flex-col h-full">
+                <div className="flex flex-col h-full mt-4">
                     <div className="flex items-center justify-between p-6 border-b">
                         <button 
                             onClick={() => setVisible(false)} 
